@@ -10,8 +10,20 @@ Open `index.html` in a browser, or host the folder on GitHub Pages.
 - Complaint form with validation and demo tracking ID
 - Tracking search, demo statistics, public notice cards
 - Suggestions form, responsive navigation, reduced-motion support
+- Export locally saved demo complaints to CSV
+- Clear local demo complaints and suggestions with confirmation
 - PWA manifest and basic service worker
 - Footer credit: Designed & Developed by TECH SPARK
 
 ## Important limitations
 This is a front-end demo. Complaints and suggestions are stored only in the current browser's localStorage. They are not transmitted to a municipal office and cannot be shared across devices. Photo is not uploaded. Demo notices and counts are not official or live data. Real production use needs a secure backend/database, authentication/roles, official department routing, verified contact/service URLs, privacy notice, secure file storage, abuse prevention, and testing. Do not publish invented helpline numbers, government claims, or payment forms.
+
+
+## Update an existing GitHub Pages repository
+1. Extract this ZIP on your phone/computer.
+2. Open your GitHub repository and choose **Add file → Upload files**.
+3. Upload/replace all six files from this folder in the repository root.
+4. Commit the changes and wait for GitHub Pages to rebuild.
+5. Refresh the published website.
+
+This ZIP does not automatically modify your GitHub repository.
