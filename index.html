@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061329"><meta name="description" content="TECH SPARK Nagar Nigam Civic Portal — नागरिक सेवाएँ, शिकायत और सार्वजनिक सूचना।">
+<title>Nagar Nigam Civic Portal | TECH SPARK</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topline"><span>🇮🇳 नागरिक सेवा पोर्टल</span><span id="today"></span><span class="topright">Demo portal · वास्तविक सरकारी वेबसाइट नहीं</span></div>
+<header class="nav">
+ <a class="brand" href="#home"><span class="brandmark">🏙️</span><span><b>नगर निगम</b><small>CIVIC PORTAL</small></span></a>
+ <button class="menuBtn" id="menuBtn" aria-label="मेन्यू खोलें">☰</button>
+ <nav id="navlinks"><a href="#services">सेवाएँ</a><a href="#complaint">शिकायत दर्ज करें</a><a href="#track">शिकायत ट्रैक करें</a><a href="#notices">सूचनाएँ</a><a href="#about">हमारे बारे में</a></nav>
+ <div class="navactions"><button class="iconbtn" id="themeBtn" aria-label="थीम बदलें">☾</button><button class="primary small" id="quickComplaint">+ शिकायत</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="heroGlow"></div><div class="heroText">
+  <div class="eyebrow"><span class="pulse"></span> SMART CITY • SMART CITIZENS</div>
+  <h1>आपका शहर,<br><em>आपकी आवाज़।</em></h1>
+  <p>नागरिक सेवाएँ, स्थानीय समस्याएँ और सार्वजनिक सूचनाएँ — एक ही जगह। सरल, पारदर्शी और सभी के लिए सुलभ।</p>
+  <div class="heroBtns"><a class="primary" href="#complaint">शिकायत दर्ज करें <span>↗</span></a><a class="secondary" href="#services">सभी सेवाएँ देखें</a></div>
+  <div class="trustrow"><span>✓ मोबाइल-फ्रेंडली</span><span>✓ हिंदी इंटरफेस</span><span>✓ शिकायत ट्रैकिंग डेमो</span></div>
+ </div>
+ <div class="cityart" aria-label="स्मार्ट सिटी illustration"><div class="orbit o1"></div><div class="orbit o2"></div><div class="sun"></div><div class="building b1"></div><div class="building b2"></div><div class="building b3"></div><div class="building b4"></div><div class="building b5"></div><div class="road"></div><div class="floating f1">💧 <span>पानी</span></div><div class="floating f2">💡 <span>स्ट्रीट लाइट</span></div><div class="floating f3">♻️ <span>स्वच्छता</span></div></div>
+</section>
+<section class="stats" aria-label="डेमो आँकड़े"><div><span class="statIcon">🧾</span><span class="statnum" id="statTotal">0</span><small>डेमो शिकायतें</small></div><div><span class="statIcon">⏳</span><span class="statnum" id="statOpen">0</span><small>जाँच / लंबित</small></div><div><span class="statIcon">✅</span><span class="statnum" id="statDone">0</span><small>समाधान किए गए</small></div><div><span class="statIcon">🏛️</span><span class="statnum">12+</span><small>सेवा श्रेणियाँ</small></div></section>
+<section class="section" id="services"><div class="sectionHead"><div><div class="eyebrow">CITIZEN SERVICES</div><h2>आपको क्या चाहिए?</h2><p>अपनी जरूरत चुनें और सही सेवा तक जल्दी पहुँचें।</p></div><label class="searchbox">⌕ <input id="serviceSearch" placeholder="सेवा खोजें..." aria-label="सेवा खोजें"></label></div>
+<div class="serviceGrid" id="serviceGrid">
+ <button class="serviceCard" data-name="पानी जल सप्लाई लीकेज"><span class="serviceIcon blue">💧</span><b>पानी की समस्या</b><small>लीकेज, सप्लाई, दूषित पानी</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="सड़क गड्ढा नाली"><span class="serviceIcon purple">🛣️</span><b>सड़क और नाली</b><small>गड्ढे, टूटी सड़क, जलभराव</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="कूड़ा सफाई स्वच्छता"><span class="serviceIcon green">♻️</span><b>सफाई और कूड़ा</b><small>कूड़ा उठान, सार्वजनिक सफाई</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="स्ट्रीट लाइट बिजली"><span class="serviceIcon yellow">💡</span><b>स्ट्रीट लाइट</b><small>खराब या बंद लाइट</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="जन्म मृत्यु प्रमाणपत्र"><span class="serviceIcon pink">📄</span><b>प्रमाणपत्र जानकारी</b><small>जन्म-मृत्यु सेवाओं के लिंक</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="हाउस प्रॉपर्टी टैक्स"><span class="serviceIcon blue">🏠</span><b>प्रॉपर्टी टैक्स</b><small>कर संबंधी जानकारी</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="मच्छर जलभराव स्वास्थ्य"><span class="serviceIcon green">🦟</span><b>मच्छर / जलभराव</b><small>फॉगिंग और रुके पानी की रिपोर्ट</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="पार्क सार्वजनिक शौचालय"><span class="serviceIcon purple">🌳</span><b>पार्क और सार्वजनिक स्थल</b><small>पार्क, शौचालय और सुविधाएँ</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="आवारा पशु"><span class="serviceIcon yellow">🐾</span><b>आवारा पशु</b><small>संबंधित सेवा की जानकारी</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="नोटिस जनसुनवाई"><span class="serviceIcon pink">📢</span><b>नोटिस और जनसुनवाई</b><small>सूचनाएँ और कार्यक्रम</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="दिव्यांग सुगम्यता"><span class="serviceIcon blue">♿</span><b>सुलभ सेवाएँ</b><small>सुलभता संबंधी सुझाव</small><span class="cardArrow">↗</span></button>
+ <button class="serviceCard" data-name="अन्य शिकायत सुझाव"><span class="serviceIcon green">💬</span><b>अन्य समस्या / सुझाव</b><small>अपनी बात साझा करें</small><span class="cardArrow">↗</span></button>
+</div><div id="noServices" class="empty hidden">कोई सेवा नहीं मिली। दूसरा शब्द खोजें।</div></section>
+<section class="section splitSection" id="complaint"><div class="sectionIntro"><div class="eyebrow">REPORT AN ISSUE</div><h2>समस्या बताइए,<br><em>हम सुन रहे हैं।</em></h2><p>फॉर्म भरें और एक डेमो ट्रैकिंग नंबर पाएँ। इस संस्करण में जानकारी इसी ब्राउज़र में सेव होती है; यह शिकायत सीधे नगर निगम को नहीं भेजता।</p><div class="miniNote">🔒 निजी जानकारी कम से कम दें। आधार नंबर, पासवर्ड या बैंक विवरण न लिखें।</div></div>
+<form id="complaintForm" class="formCard">
+ <div class="formTitle"><span>📝</span><div><b>नई शिकायत</b><small>सभी * वाले फ़ील्ड जरूरी हैं</small></div><span class="formBadge">DEMO</span></div>
+ <label>शिकायत की श्रेणी *<select id="category" required><option value="">श्रेणी चुनें</option><option>पानी की समस्या</option><option>सड़क और नाली</option><option>सफाई और कूड़ा</option><option>स्ट्रीट लाइट</option><option>मच्छर / जलभराव</option><option>पार्क और सार्वजनिक स्थल</option><option>आवारा पशु</option><option>अन्य समस्या / सुझाव</option></select></label>
+ <label>समस्या का विवरण *<textarea id="details" rows="3" minlength="10" maxlength="1000" required placeholder="जगह और समस्या के बारे में बताएं (कम से कम 10 अक्षर)"></textarea><small class="fieldhint"><span id="charCount">0</span>/1000 अक्षर</small></label>
+ <div class="formRow"><label>वार्ड / मोहल्ला<input id="ward" maxlength="100" placeholder="जैसे: वार्ड 12, इंदिरा नगर"></label><label>प्राथमिकता<select id="priority"><option>सामान्य</option><option>उच्च</option><option>तत्काल ध्यान</option></select></label></div>
+ <label>फोटो (वैकल्पिक)<input id="photo" type="file" accept="image/*"><small class="fieldhint">केवल डेमो; फोटो सर्वर पर अपलोड नहीं होगी।</small></label>
+ <label class="checkline"><input id="consent" type="checkbox" required> मैं पुष्टि करता/करती हूँ कि दी गई जानकारी सही है और इसमें संवेदनशील निजी जानकारी नहीं है।</label>
+ <button class="primary submitBtn" type="submit">डेमो शिकायत सेव करें <span>→</span></button><div id="formMessage" class="message" role="status"></div>
+</form></section>
+<section class="section trackSection" id="track"><div class="sectionHead"><div><div class="eyebrow">TRACK YOUR REPORT</div><h2>शिकायत की स्थिति</h2><p>अपना ट्रैकिंग नंबर डालकर इस ब्राउज़र में सेव शिकायत खोजें।</p></div></div><form id="trackForm" class="trackForm"><input id="trackId" placeholder="जैसे TS-2026-ABC123" aria-label="ट्रैकिंग नंबर" required><button class="primary" type="submit">स्थिति देखें</button></form><div id="trackResult"></div><div class="timelineLegend"><span>● प्राप्त</span><span>● समीक्षा में</span><span>● कार्यवाही</span><span>● समाधान</span></div></section>
+<section class="section notices" id="notices"><div class="sectionHead"><div><div class="eyebrow">PUBLIC INFORMATION</div><h2>जनता के लिए सूचना</h2><p>यहाँ नमूना सूचनाएँ हैं। प्रकाशित करने से पहले आधिकारिक स्रोत से सत्यापित करें।</p></div><span class="livePill"><i></i> सूचना केंद्र</span></div><div class="noticeGrid"><article class="noticeCard"><span class="noticeTag">नागरिक सुविधा</span><h3>ऑनलाइन शिकायत दर्ज करने की सुविधा</h3><p>समस्या का विवरण, स्थान और वैकल्पिक फोटो तैयार रखें। वास्तविक शिकायत के लिए संबंधित नगर निगम के आधिकारिक पोर्टल का उपयोग करें।</p><small>सामान्य मार्गदर्शन</small></article><article class="noticeCard"><span class="noticeTag orange">सावधानी</span><h3>आपात स्थिति में क्या करें?</h3><p>तत्काल खतरे में इस डेमो वेबसाइट पर निर्भर न रहें। स्थानीय आपातकालीन सेवाओं से सीधे संपर्क करें।</p><small>सुरक्षा सूचना</small></article><article class="noticeCard"><span class="noticeTag greenTag">पारदर्शिता</span><h3>शिकायत में सही जानकारी दें</h3><p>सटीक स्थान और स्पष्ट विवरण देने से संबंधित विभाग को समस्या समझने में मदद मिलती है।</p><small>नागरिक सुझाव</small></article></div></section>
+<section class="section ideaSection"><div><div class="eyebrow">YOUR CITY, YOUR IDEAS</div><h2>शहर को बेहतर बनाने का सुझाव दें</h2><p>सार्वजनिक सुविधा या वेबसाइट के लिए अपना सुझाव लिखें।</p></div><form id="ideaForm" class="ideaForm"><textarea id="ideaText" required minlength="5" maxlength="500" placeholder="आपका सुझाव..."></textarea><button class="primary" type="submit">सुझाव सेव करें ↗</button><div id="ideaMessage" role="status"></div></form></section>
+<section class="section about" id="about"><div class="aboutLogo">TS</div><div><div class="eyebrow">ABOUT THIS PROJECT</div><h2>तकनीक, नागरिकों के लिए।</h2><p>यह TECH SPARK द्वारा तैयार किया गया एक civic portal starter demo है। इसे आधिकारिक सरकारी वेबसाइट न समझें। किसी वास्तविक नगर निगम के नाम, सेवाओं, हेल्पलाइन, भुगतान या शिकायत प्रणाली को सक्रिय करने से पहले सत्यापित जानकारी और अधिकृत तकनीकी इंटीग्रेशन जोड़ना जरूरी है।</p></div></section>
+</main>
+<footer class="footer"><div class="footerTop"><div class="footerBrand"><div class="brand"><span class="brandmark">🏙️</span><span><b>नगर निगम</b><small>CIVIC PORTAL</small></span></div><p>साफ, स्वस्थ और समृद्ध शहर के लिए नागरिकों और सेवाओं के बीच एक डिजिटल सेतु।</p><div class="footerPills"><span>नागरिक केंद्रित</span><span>मोबाइल-फ्रेंडली</span></div></div><div><h3>Quick Links</h3><a href="#home">होम</a><a href="#services">नागरिक सेवाएँ</a><a href="#complaint">शिकायत दर्ज करें</a><a href="#track">शिकायत ट्रैक करें</a></div><div><h3>Useful Links</h3><a href="#notices">सार्वजनिक सूचनाएँ</a><a href="#about">परियोजना जानकारी</a><a href="#ideaForm">सुझाव दें</a><a href="#services">सुलभ सेवाएँ</a></div><div><h3>Connect With Us</h3><p>बेहतर शहर के लिए तकनीक और नागरिक भागीदारी।</p><div class="footerTech"><span>✦</span><b>TECH SPARK</b></div><small>Innovating Digital Solutions</small></div></div><div class="credit"><span>Designed &amp; Developed by <b>TECH SPARK</b></span><span>© <span id="year"></span> TECH SPARK. All Rights Reserved.</span></div><div class="disclaimer">यह डेमो पोर्टल है, आधिकारिक सरकारी वेबसाइट नहीं। डेमो डेटा केवल इसी डिवाइस/ब्राउज़र में सेव होता है।</div></footer>
+<div class="toast" id="toast" role="status"></div><button class="backTop" id="backTop" aria-label="ऊपर जाएँ">↑</button>
+<script src="app.js"></script>
+</body></html>
